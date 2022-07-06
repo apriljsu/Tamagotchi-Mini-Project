@@ -17,9 +17,11 @@
       </ul>
       <p>To keep your pet alive, you need to make sure none of the three stats reaches 10. You can do so by clicking the buttons to feed,turn the light off or play with them.</p>
     </div>
-    <h2>Please name your pet below</h2>
-    <input id="pet_name" type="text">
-    <input type="button" value="submit">
+    <h2>Please name your pet below to start</h2>
+    <form>
+        <input id="petname" type="text">
+        <input type="button" value="submit" onclick="setName()">
+    </form>
     <img id="egg" src="egg.gif" alt="egg">
   </body>
   <script type="text/javascript" src="js/app.js">

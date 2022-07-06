@@ -23,7 +23,13 @@ class pet {
 
 //3)Instantiate your Tamagotchi (If you created a class)
 const mametchi= new pet ("",0,5,5,5)
-console.log(mametchi)
+function setName(){
+  petName=document.getElementById("petname").value
+  console.log(petName)
+  mametchi.name=petName
+  console.log(mametchi)
+  }
+
 //4)HTML
 //add background-animate it with css
 //add welcome message and explain rules
