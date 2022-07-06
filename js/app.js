@@ -27,7 +27,7 @@ class pet {
   //Display a character of your choice on the screen to represent your pet-add egg pic
 //4)Instantiate your Tamagotchi (If you created a class)
 // Add the ability to name your pet.
-  const mametchi= new pet ("",0,5,5,5)
+  const mametchi= new pet ("",0,1,1,1)
   //add pet name
   function petName(){
   petName=document.getElementById("petname").value
@@ -35,9 +35,13 @@ class pet {
   }
   //add age
   function setAge(){
-  setInterval(displayAge,1000)
+  setInterval(displayAge,300)
   function displayAge(){
+    if(mametchi.hunger>10){
+    document.getElementById("age").innerText="your pet has died from starving"
+  }else{
     document.getElementById("age").innerText=mametchi.age++
+  }
     }
   }
   document.querySelector("#submit").addEventListener("click",()=>{
@@ -45,9 +49,22 @@ class pet {
     setAge()
   }
 )
-  // startGame(){
-  //   this.setName()
-    // this.setAge()
+  //add Hunger
+  function setHunger(){
+    setInterval(displayHunger,200)
+    function displayHunger(){
+      if(mametchi.hunger>10){
+        document.getElementById("hunger").innerText="your pet died from starving"
+      }else{
+      document.getElementById("hunger").innerText=mametchi.hunger++
+    }
+}
+}
+  document.querySelector("#submit").addEventListener("click",()=>{
+    event.target.disabled = true;
+    setHunger()
+  }
+)
 
   // document.getElementById("hunger").innerText=mametchi.hunger
   // document.getElementById("boredom").innerText=mametchi.boredom
