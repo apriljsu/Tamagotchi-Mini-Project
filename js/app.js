@@ -27,28 +27,36 @@ class pet {
   //Display a character of your choice on the screen to represent your pet-add egg pic
 //4)Instantiate your Tamagotchi (If you created a class)
 // Add the ability to name your pet.
-const mametchi= new pet ("",0,5,5,5)
-function setName(){
+  const mametchi= new pet ("",0,5,5,5)
   //add pet name
+  function petName(){
   petName=document.getElementById("petname").value
-  console.log(petName)
-  mametchi.name=petName
-  console.log(mametchi)
-  document.getElementById("petdes").innerText=`Hi! I am your pet ${petName}`
-  //add initial stats
-  document.getElementById("age").innerText=mametchi.age
-  document.getElementById("hunger").innerText=mametchi.hunger
-  document.getElementById("boredom").innerText=mametchi.boredom
-  document.getElementById("sleepiness").innerText=mametchi.sleepiness
+  document.getElementById("petdes").innerText=`Hi! I am your pet ${petName}!`
   }
+  //add age
+  function setAge(){
+  setInterval(displayAge,1000)
+  function displayAge(){
+    document.getElementById("age").innerText=mametchi.age++
+    }
+  }
+  document.querySelector("#submit").addEventListener("click",()=>{
+    event.target.disabled = true;
+    setAge()
+  }
+)
+  // startGame(){
+  //   this.setName()
+    // this.setAge()
 
-//
-// Display the following metrics for your pet:
-//
-// Hunger (1-10 scale)
-// Sleepiness (1-10 scale)
-// Boredom (1-10 scale)
-// Age
+  // document.getElementById("hunger").innerText=mametchi.hunger
+  // document.getElementById("boredom").innerText=mametchi.boredom
+  // document.getElementById("sleepiness").innerText=mametchi.sleepiness
+  // document.getElementById("submit").addEventListener("click",petName())
+  // Increase your pet's age every x minutes
+  //
+  // Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
+
 
 // Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
 //
