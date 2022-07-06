@@ -8,10 +8,23 @@ class pet {
     this.hunger=hunger
     this.boredom=boredom
   }
-}
-//2)Instantiate your Tamagotchi (If you created a class)-extend the class and set age at 0
+  //2) create functions for age, eat,hunger,boredom to decrement
+  feed(){
+    this.hunger--
+  }
+  sleep(){
+    this.sleepiness--
+  }
+  play(){
+    this.boredom--
+  }
+  }
 
-//3)HTML
+
+
+
+//3)Instantiate your Tamagotchi (If you created a class)
+//4)HTML
 //add background-animate it with css
 //add welcome message and explain rules
 // Add the ability to name your pet.
