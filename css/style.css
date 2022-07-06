@@ -1,9 +1,7 @@
 body {
+  text-align:center;
   background-image: url("/Users/jiajiasu/Desktop/GA/HW/Tamagotchi-Mini-Project/background day.jpeg")
   }
-h1,h2,div,form{
-  text-align:center;
-}
 #egg {
   display: block;
   margin-left: auto;
@@ -13,3 +11,6 @@ h1,h2,div,form{
 ul{
   list-style-type: none;
 }
+#stats {
+  text-decoration:underline;
+  }

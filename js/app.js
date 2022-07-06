@@ -21,20 +21,27 @@ class pet {
   }
   }
 
-//3)Instantiate your Tamagotchi (If you created a class)
+  //3)HTML
+  //add background-animate it with css
+  //add welcome message and explain rules
+  //Display a character of your choice on the screen to represent your pet-add egg pic
+//4)Instantiate your Tamagotchi (If you created a class)
+// Add the ability to name your pet.
 const mametchi= new pet ("",0,5,5,5)
 function setName(){
+  //add pet name
   petName=document.getElementById("petname").value
   console.log(petName)
   mametchi.name=petName
   console.log(mametchi)
+  document.getElementById("petdes").innerText=`Hi! I am your pet ${petName}`
+  //add initial stats
+  document.getElementById("age").innerText=mametchi.age
+  document.getElementById("hunger").innerText=mametchi.hunger
+  document.getElementById("boredom").innerText=mametchi.boredom
+  document.getElementById("sleepiness").innerText=mametchi.sleepiness
   }
 
-//4)HTML
-//add background-animate it with css
-//add welcome message and explain rules
-// Add the ability to name your pet.
-//Display a character of your choice on the screen to represent your pet-add egg pic
 //
 // Display the following metrics for your pet:
 //
