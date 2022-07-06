@@ -7,6 +7,7 @@ class pet {
     this.age=age
     this.hunger=hunger
     this.boredom=boredom
+    this.sleepiness=sleepiness
   }
   //2) create functions for age, eat,hunger,boredom to decrement
   feed(){
@@ -20,10 +21,9 @@ class pet {
   }
   }
 
-
-
-
 //3)Instantiate your Tamagotchi (If you created a class)
+const mametchi= new pet ("",0,5,5,5)
+console.log(mametchi)
 //4)HTML
 //add background-animate it with css
 //add welcome message and explain rules
