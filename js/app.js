@@ -1,5 +1,3 @@
-console.log("check")
-
 //1)Create an Object or Class using hunger,Sleepiness,boredom and age
 class pet {
   constructor(name,age,hunger,boredom,sleepiness){
@@ -11,7 +9,7 @@ class pet {
   }
   //2) create functions for age, eat,hunger,boredom to decrement
   feed(){
-    this.hunger--
+    this.hunger=this.hunger-1
   }
   sleep(){
     this.sleepiness--
@@ -21,12 +19,7 @@ class pet {
   }
   }
 
-  //3)HTML
-  //add background-animate it with css
-  //add welcome message and explain rules
-  //Display a character of your choice on the screen to represent your pet-add egg pic
-//4)Instantiate your Tamagotchi (If you created a class)
-// Add the ability to name your pet.
+  //4)Instantiate your Tamagotchi (If you created a class)
   const mametchi= new pet ("",0,1,1,1)
   //add pet name
   function petName(){
@@ -35,36 +28,34 @@ class pet {
   }
   //add age
   function setAge(){
-  setInterval(displayAge,300)
+  setInterval(displayAge,30000)
   function displayAge(){
-    if(mametchi.hunger>10){
+    if(mametchi.hunger>=10){
     document.getElementById("age").innerText="your pet has died from starving"
   }else{
     document.getElementById("age").innerText=mametchi.age++
   }
     }
   }
-  document.querySelector("#submit").addEventListener("click",()=>{
-    event.target.disabled = true;
-    setAge()
-  }
-)
-  //add Hunger
+  document.querySelector("#submit").addEventListener("click",setAge)
+  // add Hunger
   function setHunger(){
-    setInterval(displayHunger,200)
+    setInterval(displayHunger,2000)
     function displayHunger(){
-      if(mametchi.hunger>10){
-        document.getElementById("hunger").innerText="your pet died from starving"
+      if(mametchi.hunger>=10){
+        document.getElementById("hunger").innerText="your pet has died from starving"
       }else{
-      document.getElementById("hunger").innerText=mametchi.hunger++
+        document.getElementById("hunger").innerText=mametchi.hunger ++
+      }
     }
-}
-}
-  document.querySelector("#submit").addEventListener("click",()=>{
-    event.target.disabled = true;
-    setHunger()
   }
-)
+  document.querySelector("#submit").addEventListener("click",setHunger)
+//add event listeners to feed button
+document.getElementById("feed").addEventListener("click",(e)=>{
+  mametchi.feed()
+  document.getElementById("hunger").innerText=mametchi.hunger
+})
+
 
   // document.getElementById("hunger").innerText=mametchi.hunger
   // document.getElementById("boredom").innerText=mametchi.boredom
