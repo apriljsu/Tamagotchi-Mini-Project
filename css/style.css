@@ -3,9 +3,12 @@ body {
   background-image: url("/Users/jiajiasu/Desktop/GA/HW/Tamagotchi-Mini-Project/background day.jpeg");
     }
 #egg {
-  /* position: relative; */
-  width:30%;
-  animation:mymove 3s infinite;
+  height: 50px;
+    width: 50px;
+    background: teal;
+    border-radius: 50%;
+    animation: move 3s infinite;
+    position: relative;
   }
 
 ul{
@@ -14,32 +17,18 @@ ul{
 #stats {
   text-decoration:underline;
   }
-  /* @keyframes mymove {
-    0% {
-    left: 50%;
-  }
-  25% {
-    left:0%;
-  }
-  50% {
-    left:50%;
-  }
-  75% {
-    left:100%;
-  }
-  100% {
-    left:50%;
-  }
-  50% {
-    left: 100%;
-  }
-   100% {
+  @keyframes move {
+  0% {
     left: 0;
   }
+  50% {
+    left: calc(100% - 50px);
   }
-  .container{
-    outline:1px solid red;
-    position: relative;
-    width: 600px;
-    margin:0 auto;
-  } */
+  100% {
+    left: 0;
+  }
+}
+.container {
+width: 50%;
+margin: 0 auto;
+}
