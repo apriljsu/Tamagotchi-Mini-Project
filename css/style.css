@@ -1,34 +1,57 @@
 body {
+  font-family: serif;
   text-align:center;
   background-image: url("/Users/jiajiasu/Desktop/GA/HW/Tamagotchi-Mini-Project/background day.jpeg");
     }
-#egg {
-  height: 50px;
-    width: 50px;
-    background: teal;
-    border-radius: 50%;
-    animation: move 3s infinite;
-    position: relative;
-  }
-
 ul{
   list-style-type: none;
 }
 #stats {
-  text-decoration:underline;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  gap:70px;
+    }
+.attribute {
+  text-decoration: underline;
+  font-weight: bold;
   }
-  @keyframes move {
+.container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+#egg {
+  height: 100px;
+  width: 100px;
+  animation: move 3s infinite;
+  position: relative;
+}
+#petdes {
+  margin-top:50px;
+}
+
+.egg-image {
+display:block;
+width: 100%;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+@keyframes move {
   0% {
     left: 0;
   }
   50% {
-    left: calc(100% - 50px);
+    left: calc(100% - 100px);
   }
   100% {
     left: 0;
   }
 }
-.container {
-width: 50%;
-margin: 0 auto;
+.sub-stats{
+  display: flex;
+  flex-direction: column;
+}
+#age-stat{
+  font-weight: bold;
 }

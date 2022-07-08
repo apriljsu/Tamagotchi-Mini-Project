@@ -15,30 +15,39 @@
         <li>Sleepiness (1-10 scale)</li>
         <li>Boredom (1-10 scale)</li>
       </ul>
-      <p>To keep your pet alive, you need to make sure none of the three stats reaches 10. You can do so by clicking the buttons to feed,turn the light off or play with them.</p>
+      <p>To keep your pet alive, you need to make sure none of the three stats reaches 10 or 0. You can do so by clicking the interactive buttons.</p>
     </div>
     <h2>Please name your pet below to start</h2>
     <form>
         <input id="petname" type="text">
         <input id="submit" type="button" value="submit" onclick="petName()" >
     </form>
-<div class="container">
-    <img id="egg" src="egg.gif" alt="egg">
-</div>
-
+    <div class="container">
+      <div id="egg">
+        <img id="egg-image" class="egg-image" src="egg.gif" alt="egg" />
+      </div>
+    </div>
     <h3 id="petdes"></h3>
-    <div id="stats">
+    <div id="age-stat">
       <p class="attribute" id="age attribute">Age</p>
       <p class="measure" id="age">0</p>
+    </div>
+    <div id="stats">
+        <div class="sub-stats">
       <p class="attribute" id="hunger attribute">Hunger Level</p>
       <p class="measure" id="hunger">0</p>
       <input id="feed" type="button" value="feed me">
+    </div>
+    <div class="sub-stats">
       <p class="attribute" id="boredom attribute">Boredom Level</p>
       <p class="measure" id="boredom">0</p>
       <input id="play" type="button" value="play with me">
+    </div>
+    <div class="sub-stats">
       <p class="attribute" id="sleepiness attribute">Sleepiness Level</p>
       <p class="measure" id="sleepiness">0</p>
-      <input id="sleep" type="button" value="turn the light off">
+      <input id="sleep" type="button" value="sleep time">
+    </div>
     </div>
     </body>
   <script type="text/javascript" src="js/app.js">
