@@ -35,18 +35,17 @@ class pet {
   }
 //add age
   function setAge(){
-  setInterval(displayAge,5000)
+    setInterval(displayAge,2000)
   function displayAge(){
     if(mametchi.hunger>=10||mametchi.hunger<=0||mametchi.boredom>=10||mametchi.boredom<=0||mametchi.sleepiness>=10||mametchi.sleepiness<=0){
     ageID.innerText=""
   }else{
     ageID.innerText=mametchi.age++
-    // Morph
-    if(mametchi.age>0){
-      document.getElementById("egg-image").src="img/pet older.gif"
+    if(mametchi.age>1){
+    document.getElementById("egg-image").src="img/pet older.gif"
+    }
     }
   }
-    }
   }
   document.querySelector("#submit").addEventListener("click",setAge)
 
@@ -119,9 +118,5 @@ submitID.addEventListener("click",setSleep)
 document.getElementById("sleep").addEventListener("click",(e)=>{
   mametchi.sleep()
   sleepinessID.innerText=mametchi.sleepiness
-})
-
-
-
-// Animate your pet across the screen while it's alive.-use key frame animation with css
-// You must have a game object or class for your Tamagotchi,and event listeners/handlers that call methods in your game object or class.
+}
+)
