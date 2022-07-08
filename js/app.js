@@ -43,7 +43,7 @@ class pet {
     ageID.innerText=mametchi.age++
     // Morph
     if(mametchi.age>0){
-      document.getElementById("egg-image").src="pet older.gif"
+      document.getElementById("egg-image").src="img/pet older.gif"
     }
   }
     }

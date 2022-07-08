@@ -1,8 +1,9 @@
 body {
   font-family: serif;
   text-align:center;
-  background-image: url("/Users/jiajiasu/Desktop/GA/HW/Tamagotchi-Mini-Project/background day.jpeg");
+  background-image: url("/Users/jiajiasu/Desktop/GA/HW/Tamagotchi-Mini-Project/img/background day.jpeg");
     }
+
 ul{
   list-style-type: none;
 }
