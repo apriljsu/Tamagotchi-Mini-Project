@@ -38,6 +38,7 @@ width: 100%;
 margin-top: 50px;
 margin-bottom: 50px;
 }
+
 @keyframes move {
   0% {
     left: 0;
@@ -49,10 +50,12 @@ margin-bottom: 50px;
     left: 0;
   }
 }
+
 .sub-stats{
   display: flex;
   flex-direction: column;
 }
+
 #age-stat{
   font-weight: bold;
 }

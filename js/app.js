@@ -42,7 +42,7 @@ class pet {
   }else{
     ageID.innerText=mametchi.age++
     if(mametchi.age>1){
-    document.getElementById("egg-image").src="img/pet older.gif"
+    document.getElementById("egg-image").src="img/pet_older.gif"
     }
     }
   }
