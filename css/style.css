@@ -2,7 +2,10 @@ body {
   font-family: serif;
   text-align:center;
   background-image: url("../img/background_day.jpeg");
-    }
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:1500px;
+      }
 
 ul{
   list-style-type: none;

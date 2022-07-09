@@ -14,7 +14,7 @@ class pet {
     this.boredom=boredom
     this.sleepiness=sleepiness
   }
-  //create functions for age, eat,hunger,boredom to decrement
+  //define methods for age, eat,hunger,boredom to decrement
   feed(){
     this.hunger--
   }
@@ -33,6 +33,7 @@ class pet {
   petName=document.getElementById("petname").value
   document.getElementById("petdes").innerText=`Hi! I am your pet ${petName}!`
   }
+
 //add age
   function setAge(){
     setInterval(displayAge,2000)
@@ -43,7 +44,7 @@ class pet {
     ageID.innerText=mametchi.age++
     if(mametchi.age>1){
     document.getElementById("egg-image").src="img/pet_older.gif"
-    }
+        }
     }
   }
   }
@@ -118,5 +119,10 @@ submitID.addEventListener("click",setSleep)
 document.getElementById("sleep").addEventListener("click",(e)=>{
   mametchi.sleep()
   sleepinessID.innerText=mametchi.sleepiness
+  document.body.style.backgroundImage="url(img/night_sky.gif)"
+}
+)
+document.getElementById("awake").addEventListener("click",(e)=>{
+    document.body.style.backgroundImage="url(img/background_day.jpeg)"
 }
 )
